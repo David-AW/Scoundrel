@@ -41,7 +41,7 @@ public class Deck extends ArrayQueue<Card>{
 	}
 	
 	private void splitShuffle() {
-		if (size() <= 1)
+		if (size() < 2)
 			return;
 		Stack<Card> a = new Stack<Card>();
 		Stack<Card> b = new Stack<Card>();
