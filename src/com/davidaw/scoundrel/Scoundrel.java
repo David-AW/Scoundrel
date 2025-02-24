@@ -8,7 +8,9 @@ package com.davidaw.scoundrel;
 
 public class Scoundrel {
 
-	public Scoundrel() {
+	public static void main(String[] args) {
+		Deck deck = new Deck();
+		deck.shuffle();
 		
 	}
 	
