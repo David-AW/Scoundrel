@@ -1,10 +1,10 @@
 package com.davidaw.scoundrel;
 public class ArrayQueue<T> {
 
-	Object[] storage;
+	private Object[] storage;
 	
-	int start = 0;
-	int next = 0;
+	private int start = 0;
+	private int next = 0;
 	
 	public ArrayQueue() {
 		this(16);

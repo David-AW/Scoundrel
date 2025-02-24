@@ -2,8 +2,8 @@ package com.davidaw.scoundrel;
 
 public class ArrayStack<T> {
 
-	Object[] storage;
-	int next = 0;
+	private Object[] storage;
+	private int next = 0;
 
 	public ArrayStack() {
 		this(16);
