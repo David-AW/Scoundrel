@@ -62,6 +62,11 @@ public class ArrayQueue<T> {
 			enqueue(item);
 		}
 	}
+	
+	public void clear() {
+		start = 0;
+		next = 0;
+	}
 
 	public boolean isEmpty() {
 		return start == next;
