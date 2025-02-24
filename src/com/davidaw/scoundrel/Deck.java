@@ -43,12 +43,12 @@ public class Deck extends ArrayQueue<Card>{
 	private void splitShuffle() {
 		Stack<Card> a = new Stack<Card>();
 		Stack<Card> b = new Stack<Card>();
-		Card[] cards = toArray();
+		Object[] cards = toArray();
 		for (int i = 0; i < cards.length; i++) {
 			if (i < cards.length/2)
-				a.push(cards[i]);
+				a.push((Card)cards[i]);
 			else
-				b.push(cards[i]);
+				b.push((Card)cards[i]);
 		}
 		clear();
 		while(!b.isEmpty()) {

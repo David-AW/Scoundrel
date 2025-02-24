@@ -84,12 +84,11 @@ public class ArrayQueue<T> {
 		return storage.length;
 	}
 	
-	@SuppressWarnings("unchecked")
-	public T[] toArray() {
+	public Object[] toArray() {
 		Object[] temp = new Object[size()];
 		for (int i = 0; i < temp.length; i++)
 			temp[i] = get(i);
-		return (T[]) temp;
+		return (Object[]) temp;
 	}
  
 	public String toString(String delimiter) {
