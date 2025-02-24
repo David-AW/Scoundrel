@@ -78,7 +78,15 @@ public class ArrayQueue<T> {
 	public int maxSize() {
 		return storage.length;
 	}
-
+	
+	@SuppressWarnings("unchecked")
+	public T[] toArray() {
+		Object[] temp = new Object[size()];
+		for (int i = 0; i < temp.length; i++)
+			temp[i] = get(i);
+		return (T[]) temp;
+	}
+ 
 	public String toString(String delimiter) {
 		String temp = "";
 		for (int i = start; i < next; i++) {
