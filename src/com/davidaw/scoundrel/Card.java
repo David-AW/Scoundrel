@@ -23,4 +23,9 @@ public final class Card implements Comparable<Card>{
 		return this.value - other.value;
 	}
 	
+	@Override
+	public String toString() {
+		return "[" + type.toString() + ":" + value + "]";
+	}
+	
 }
