@@ -36,14 +36,23 @@ public class ArrayQueue<T> {
 
 	public boolean swap(int from_index, int to_index) {
 		int normalized_next = next - start;
-		if (from_index < 0 || from_index >= to_index || to_index > normalized_next)
+		if (from_index < 0 || from_index >= to_index || to_index >= normalized_next)
 			return false;
-		int actual_from = (from_index + next) % storage.length;
-		int actual_to = (to_index + next) % storage.length;
+		int actual_from = (from_index + start) % storage.length;
+		int actual_to = (to_index + start) % storage.length;
 		Object temp = storage[actual_to];
 		storage[actual_to] = storage[actual_from];
 		storage[actual_from] = temp;
 		return true;
+	}
+	
+	@SuppressWarnings("unchecked")
+	public T get(int index) throws IndexOutOfBoundsException {
+		int normalized_next = next - start;
+		if (index < 0 || index >= normalized_next)
+			throw new IndexOutOfBoundsException(index);
+		int actual_index = (index + start) % storage.length;
+		return (T) storage[actual_index];
 	}
 	
 	public void fill(T[] list) {
