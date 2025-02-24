@@ -53,6 +53,10 @@ public class ArrayStack<T> {
 	public int size() {
 		return next;
 	}
+	
+	public int maxSize() {
+		return storage.length;
+	}
 
 	public String toString(String delimiter) {
 		String temp = "";
